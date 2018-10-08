@@ -88,15 +88,43 @@ addItem(newItem);
 
 //Task 5(b)
 function sortCart (keyName){
-    return cart.sort (keyName);
+    if (keyName == "quantity")
+    {
+        cart.sort (function (obj1, obj2){
+            return obj1.quantity- obj2.quantity;
+        });
+    }
+    else if (keyName == "price")
+    {
+        cart.sort (function (obj1, obj2){
+            return obj1.price- obj2.price;
+        });
+    }
+    else
+    {
+        cart.sort(function (obj1, obj2){
+            var nameA = obj1.name.toUpperCase();
+            var nameB = obj2.name.toUpperCase();
+           if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+             return 0;
+        });
+        
+    }
     console.log(cart);
 }
 
-var keyName= quantity;
-sortCart (keyName);
+sortCart("name");
+//sortCart("quantity");
+//sortCart("price");
 
 //Task 5(c)
 function findByName (name){
+    
     
 }
 
