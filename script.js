@@ -103,12 +103,12 @@ function sortCart (keyName){
     else
     {
         cart.sort(function (obj1, obj2){
-            var nameA = obj1.name.toUpperCase();
-            var nameB = obj2.name.toUpperCase();
-           if (nameA < nameB) {
+            var nameA= obj1.name.toUpperCase();
+            var nameB= obj2.name.toUpperCase();
+           if (nameA< nameB) {
                 return -1;
             }
-            if (nameA > nameB) {
+            if (nameA> nameB) {
                 return 1;
             }
              return 0;
@@ -138,5 +138,15 @@ findByName("Regular Tees");
 //Task 5(d)
 //total cost= price*quantity of all the item types/objects
 function totalCost(){
+    var temp= 0;
+    var total= 0;
     
+    cart.forEach(function (i, index){           //don't have to give index      
+        temp= i.price * i.quantity;
+        total= total + temp;
+    });
+    
+    console.log(total);
 }
+
+totalCost();
