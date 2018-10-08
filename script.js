@@ -124,10 +124,16 @@ sortCart("name");
 
 //Task 5(c)
 function findByName (name){
-    
-    
+    var filteredObj= cart.filter (obj =>{
+        return obj.name.includes(name);
+    });
+    console.log (filteredObj);
 }
 
+//findByName("Shoes");
+//findByName("Socks");
+findByName("Regular Tees");
+//findByName("Watch");
 
 //Task 5(d)
 //total cost= price*quantity of all the item types/objects
