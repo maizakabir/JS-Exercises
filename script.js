@@ -54,3 +54,55 @@ function getReadingStatus (index){
 console.log(getReadingStatus(1));
 console.log(getReadingStatus(0));
 console.log(getReadingStatus(2));
+
+//Task 5(a)
+var cart = [ 
+   {
+       name: 'Shoes',
+       price: 560,
+       quantity: 4
+   },
+   {
+       name: 'Regular Tees',
+       price: 455.50,
+       quantity: 6
+   },
+   {
+       name: 'Socks',
+       price: 65.99,
+       quantity: 2
+   }];
+
+function addItem (newItem){
+    cart.push (newItem);
+    console.log (cart);
+}
+
+var newItem = {
+    name: 'Watch', 
+    price: 64, 
+    quantity: 1
+};
+
+addItem(newItem);
+
+//Task 5(b)
+function sortCart (keyName){
+    return cart.sort (keyName);
+    console.log(cart);
+}
+
+var keyName= quantity;
+sortCart (keyName);
+
+//Task 5(c)
+function findByName (name){
+    
+}
+
+
+//Task 5(d)
+//total cost= price*quantity of all the item types/objects
+function totalCost(){
+    
+}
